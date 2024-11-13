@@ -1,0 +1,1031 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #111;
+} 
+body{
+    font-family: "Noto Sans", sans-serif;
+    color: #111;
+    background: #EFE3D8;
+}
+/*헤더*/
+header{
+    width: 100%;
+    background: #FFF8F1;
+    border-bottom: 1px solid #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+header.none_head{
+    opacity: 0;
+    visibility: hidden;
+}
+.show_head{
+    opacity: 1;
+    visibility: visible;
+}
+div.top_element_wrap{
+    max-width: 1920px;
+    width: 100%;
+    height: 88px; 
+    overflow: hidden;
+    margin: 0 auto;
+    padding-top: 30px;
+    position: relative;
+    transition: height 200ms ease-out;
+}
+/*로고*/
+div.logo_container a{
+    width: 170px;
+    display: block;
+    float: left;
+    position: relative;
+    top: 0;
+    left: 30px;
+}
+.logo_container img{
+    width: 100%;
+}
+/*네비게이션*/
+header nav{
+    width: 714px;
+    float: left;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+nav ul.mainmwnu_wrap{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "Jost", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+ul.mainmwnu_wrap li a{
+    transition: color 0.2s;
+}
+ul.mainmwnu_wrap li a:hover{
+    color: #BE653F;
+}
+div.submenu_wrap{
+    width: 100%;
+    height: 56px;
+    overflow: hidden;
+    position: relative;
+    display: none;
+}
+.submenu_wrap > div{
+    width: 100%;
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.hide-submenu{  /*스크립트 제어*/
+    display: none;
+}
+.show-submenu{  /*스크립트 제어*/
+    display: block;
+}
+.submenu_wrap > div > ul{
+    overflow: hidden;
+    clear: both;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+div.sub-box1 ul{
+    width: 90%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+div.sub-box2 ul{
+    width: 90%;
+    margin: 0 auto;
+}
+div.sub-box4 ul{
+    width: 32%;
+    margin: 0 auto;
+}
+.submenu_wrap > div > ul a{
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #585858;
+    transition: color 0.2s;
+}
+.submenu_wrap > div > ul a:hover{
+    color: #BE653F;
+}
+/*로그인/회원가입/검색*/
+div.user_account_wrap{
+    width: 174px;
+    overflow: hidden;
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 0;
+    right: 30px;
+}
+.user_account_wrap a{
+    display: block;
+    font-family: "Jost", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+/*메인*/
+main{
+    width: 100%;
+    overflow: hidden; 
+    padding-top: 50px; 
+}
+/*탑 로고*/
+div.top_logo{
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 22px;
+}
+/*메인 탑 슬라이드 및 카테고리*/
+section.main_top_box{
+    max-width: 1920px;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 30px 0;
+    margin: 0 auto;
+}
+div.main_top_contents{ 
+    width: 100%;
+    height: 714px;
+    overflow: hidden;
+}
+/*카테고리 L*/
+article.category_wrap-L{
+    width: 12%;
+    height: 100%;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+div.category_list{
+    width: 100%;
+    overflow: hidden;
+}
+li.main_category{
+    margin: 24px 0;
+}
+li.main_category > a{
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    font-family: "Jost", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    transition: color 0.2s;
+}
+div.add_toggle-icon{
+    width: 22px;
+    height: 22px;
+    box-sizing: border-box;
+    float: right;
+    position: relative;
+    top: 4px;
+    right: 0;
+}
+.add_toggle-icon span{
+    width: 4px;
+    height: 14px;
+    display: block;
+    background: #222;
+    position: absolute;
+    top: 4px;
+}
+.add_toggle-icon span.add_row{
+    left: 9px;
+    transform: rotate(90deg);
+}
+.add_toggle-icon span.add_column{
+    left: 9px;
+}
+span.addHide{
+    display: none;  /*스크립트 제어*/
+}
+ul.sub_category{
+    width: 100%;
+    box-sizing: border-box;
+}
+ul.sub_category a{
+    display: block;
+    margin: 6px 0;
+    color: #4A4A4A;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+ul.sub_category a:hover{
+    color: #BE653F;
+}
+/*슬라이드 M*/
+article.slide_wrap-M{
+    width: 76%;
+    height: 714px;
+    overflow: hidden;
+    float: left;
+    box-sizing: border-box;
+    position: relative;
+}
+div.slide_inner_box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+div.slide_list_box{
+    width: 100%;
+    height: 100%;
+    background: #222;
+    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* 초기 상태에서 투명 */
+    transition: opacity 1s; /* 페이드 애니메이션 */
+}
+.slide_list_box img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    transition: transform 5s;
+}
+div.slide_txt_box{
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    bottom: 80px;
+}
+.slide_txt_box > div{
+    margin-bottom: 4px;
+    font-size: 28px;
+    font-weight: 700;
+}
+.slide_txt_box > p{
+    font-size: 16px;
+    font-weight: 400;
+}
+div.pagenat_element{
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+}
+div.pagenation_container{
+    width: 398px;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+div.pagenat_element span{
+    display: block;
+    width: 94px;
+    height: 2px;
+    cursor: pointer;
+}
+.deactivate_Page{
+    background: #adadad;
+}
+.present_Page{
+    background: #fff;
+}
+/*유저계정/sns아이콘 R*/
+article.top_icon_wrapR{
+    width: 12%;
+    overflow: hidden;
+    padding-top: 30px;
+    float: left;
+    box-sizing: border-box;
+}
+.top_icon_wrapR .user_contents{
+    width: 100%;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    position: relative;
+}
+div.sns_icon_wrap{
+    width: 100%;
+    padding-top: 30px;
+    text-align: center;
+}
+.sns_icon_wrap > div{
+    margin: 60px 0;
+}
+.sns_icon_wrap img{
+    opacity: 0.8;
+    transition: opacity 0.3s, transform 0.3s;
+}
+.sns_icon_wrap img:hover{
+    opacity: 1;
+    transform: scale(1.2);
+}
+/*패션 영역*/ 
+section.sec-fashion-wrap{
+    width: 100%;
+    overflow: hidden;
+    padding-top: 96px;
+    padding-left: 138px;
+}
+article.fashion_inner_box{
+    width: 100%;
+    max-width: 1920px;
+    overflow: hidden;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+}
+.fashion_inner_box > h1{
+    font-family: "Aref Ruqaa", serif;
+    font-size: 54px;
+    font-weight: 400;
+}
+.fashion_inner_box > h1 > a{
+    display: block;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+    float: right;
+    cursor: pointer;
+    position: relative;
+    top: 30px;
+    right: 11%;
+    transition: opacity 0.1s;
+}
+.fashion_inner_box > h1 > a:hover{
+    opacity: 0.3;
+}
+.fashion_inner_box > h1 > a >img{
+    position: relative;
+    top: 1px;
+}
+div.big_box {
+    width: 573px;
+    height: 686px;
+    padding-top: 80px;
+    float: left;
+}
+div.big_box a{
+    display: block;
+    width: 100%;
+    height: 642px;
+    overflow: hidden;
+    background: #333;
+    position: relative;
+}
+.big_box img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    transition: transform 0.3s linear;
+}
+.big_box p{
+    margin: 6px 0;
+}
+div.fashion_list_wrap{
+    width: 1824px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 612px;
+}
+div.fashion_list_inner_box{
+    width: 100%;
+    overflow: hidden;
+}
+div.fashion_list{
+    width: 304px;
+    height: 572px;
+    padding: 0 18px;
+    overflow: hidden;
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+}
+div.fashion_list a{
+    display: block;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+div.fashion_list img{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+div.fashion_list p{
+    margin: 6px 0;
+}
+div.bottom_contents_wrap{
+    width: 624px;
+    height: 66px;
+    overflow: hidden;
+    text-align: center;
+    font-family: "Aref Ruqaa", serif;
+    font-size: 34px;
+    font-weight: 400;
+    position: absolute;
+    right: 260px;
+    bottom: 83px;
+}
+.bottom_contents_wrap span{
+    display: block;
+    width: 66px;
+    height: 66px;
+    line-height: 66px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+}
+.bottom_contents_wrap span.arrow_left{
+    left: 0;
+}
+.bottom_contents_wrap span.arrow_right{
+    right: 0;
+}
+/*투데이 픽*/
+section.sec-todaysPick-wrap{
+    max-width: 1920px;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 96px;
+    margin: 0 auto;
+}
+.sec-todaysPick-wrap > h1{
+    text-align: center;
+    font-family: "Aref Ruqaa", serif;
+    font-size: 54px;
+    font-weight: 400;
+}
+div.pick_elements{
+    width: 992px;
+    overflow: hidden;
+    margin: 42px auto;
+    box-sizing: border-box;
+}
+.pick_elements article{
+    width: 50%;
+    height: 728px;
+    padding: 18px;
+    box-sizing: border-box;
+}
+article.pick_container:first-child{
+    float: left;
+}
+article.pick_container:last-child{
+    float: right;
+}
+.pick_elements article a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+div.pick_img_box{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.pick_img_box img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    transition: transform 0.3s linear;
+}
+div.title_box{
+    width: 100%;
+    height: 82px;
+    line-height: 82px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    background: #000000b9;
+    color: #fff;
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+div.view_btn_box{
+    transition: opacity 0.3s ease;
+}
+div.view_btn_box button{
+    width: 100%;
+    height: 82px;
+    padding: 30px 12px;
+    box-sizing: border-box;
+    background: #fff;
+    color: #111;
+    border: none;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+/*뷰티 영역*/
+section.sec-beauty-wrap{
+    width: 100%;
+    overflow: hidden;
+    padding-top: 96px;
+    padding-left: 138px;
+}
+article.beauty_inner_box{
+    width: 100%;
+    max-width: 1920px;
+    overflow: hidden;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+}
+.beauty_inner_box > h1{
+    font-family: "Aref Ruqaa", serif;
+    font-size: 54px;
+    font-weight: 400;
+}
+.beauty_inner_box > h1 > a{
+    display: block;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+    float: right;
+    cursor: pointer;
+    position: relative;
+    top: 30px;
+    right: 11%;
+    transition: opacity 0.1s;
+}
+.beauty_inner_box > h1 > a:hover{
+    opacity: 0.3;
+}
+.beauty_inner_box > h1 > a >img{
+    position: relative;
+    top: 1px;
+}
+div.beauty_list_wrap{
+    width: 1824px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 612px;
+}
+div.beauty_list_inner_box{
+    width: 100%;
+    overflow: hidden;
+}
+div.beauty_list{
+    width: 304px;
+    height: 572px;
+    padding: 0 18px;
+    overflow: hidden;
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+}
+div.beauty_list a{
+    display: block;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+div.beauty_list img{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: fade in 0.3s;
+}
+div.beauty_list p{
+    margin: 6px 0;
+}
+/*위클리 베스트 영역*/
+section.sec-weeklyBest-wrap{
+    max-width: 1920px;
+    width: 100%;
+    padding-top: 96px;
+    margin: 0 auto;
+}
+.sec-weeklyBest-wrap > h1{
+    text-align: center;
+    font-family: "Aref Ruqaa", serif;
+    font-size: 54px;
+    font-weight: 400;
+}
+div.weeklyBest_elements{
+    width: 1400px;
+    overflow: hidden;
+    padding: 42px 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.weeklyBest_elements article{
+    width: calc(100% / 3);
+    overflow: hidden;
+    padding: 0 22px;
+    box-sizing: border-box;
+    transition: opacity 1s ease-in, transform 1s ease-in;
+}
+.weeklyBox_non{
+    opacity: 0;
+    transform: translateX(100%);
+}
+.Best_Item_container div.numb{
+    font-family: "Aref Ruqaa", serif;
+    font-size: 54px;
+    font-weight: 400;
+}
+
+.Best_Item_container a{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+div.Best_Item_img{
+    width: 100%;
+    height: 605px;
+    overflow: hidden;
+    position: relative;
+}
+.Best_Item_img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    transition: transform 0.3s linear;
+}
+div.Best_Item_tit{
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+}
+.Best_Item_tit span{
+    color: #DF0000;
+}
+.Best_Item_tit p{
+    margin-top: 4px;
+    font-size: 18px;
+    font-weight: 500;
+}
+/*스타 영역*/
+section.sec-star-wrap{
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 96px;
+    box-sizing: border-box;
+}
+.sec-star-wrap > h1{
+    font-family: "Aref Ruqaa", serif;
+    font-size: 54px;
+    font-weight: 400;
+}
+.sec-star-wrap > h1 > a{
+    display: block;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+    float: right;
+    cursor: pointer;
+    position: relative;
+    top: 50px;
+    right: 30px;
+    transition: opacity 0.1s;
+}
+.sec-star-wrap > h1 > a:hover{
+    opacity: 0.3;
+}
+.sec-star-wrap > h1 > a >img{
+    position: relative;
+    top: 1px;
+}
+.sec-star-wrap article{
+    width: 1400px;
+    overflow: hidden;
+    margin: 32px 0;
+    box-sizing: border-box;
+}
+.sec-star-wrap article > div{
+    width: 49%;
+    overflow: hidden;
+    float: left;
+    box-sizing: border-box;
+}
+div.celebrity_box_wrap > div{
+    width: 50%;
+    overflow: hidden;
+    padding-right: 20px;
+    float: left;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 18px; 
+    font-weight: 500;
+}
+div.celebrity-Img{
+    width: 100%;
+    height: 466px;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    border: 8px solid #fff;
+}
+.celebrity-Img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    transition: transform 0.3s linear;
+}
+.celebrity .txt{
+    padding: 16px 0;
+}
+div.shiningStar_txt_box{
+    width: 100%;
+    height: 466px;
+    margin-left: 10px;
+    line-height: 466px;
+    box-sizing: border-box;
+    text-align: center;
+    background: #fff;
+}
+article.star_wrap_bottm .shiningStar_txt_box{
+    margin-left: 0;
+}
+article.star_wrap_bottm .celebrity_box_wrap{
+    margin-left: 28px;
+}
+.shiningStar_txt_box a{
+    display: block;
+    font-family: "Aref Ruqaa", serif;
+    font-size: 44px;
+    font-weight: 400;
+}
+/*데코 영역*/
+section.sec-deco-wrap{
+    width: 100%;
+    overflow: hidden;
+    padding-top: 96px;
+    padding-left: 138px;
+}
+article.deco_inner_box{
+    width: 100%;
+    max-width: 1920px;
+    overflow: hidden;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+}
+.deco_inner_box > h1{
+    font-family: "Aref Ruqaa", serif;
+    font-size: 54px;
+    font-weight: 400;
+}
+.deco_inner_box > h1 > a{
+    display: block;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+    float: right;
+    cursor: pointer;
+    position: relative;
+    top: 30px;
+    right: 11%;
+    transition: opacity 0.1s;
+}
+.deco_inner_box > h1 > a:hover{
+    opacity: 0.3;
+}
+.deco_inner_box > h1 > a >img{
+    position: relative;
+    top: 1px;
+}
+.deco_inner_box .big_box:hover img{
+    transform: scale(1.1);
+}
+div.deco_list_wrap{
+    width: 1824px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 612px;
+}
+div.deco_list_inner_box{
+    width: 100%;
+    overflow: hidden;
+}
+div.deco_list{
+    width: 304px;
+    height: 572px;
+    padding: 0 18px;
+    overflow: hidden;
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+}
+div.deco_list a{
+    display: block;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+div.deco_list img{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s linear;
+}
+div.deco_list:hover img{
+    transform: scale(1.1);
+}
+div.deco_list p{
+    margin: 6px 0;
+}
+/*푸터*/
+footer{
+    padding-top: 120px;
+}
+div.follow_box{
+    max-width: 1920px;
+    width: 100%;
+    padding: 30px 0;
+    margin: 0 auto;
+}
+div.contents_wrap{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.contents_wrap > div{
+    width: calc(100% / 3);
+    height: 86px;
+    line-height: 86px;
+    text-align: center;
+    box-sizing: border-box;
+}
+div.followBtn_wrap button{
+    padding: 18px 40px;
+    border: none;
+    background: #fff;
+    cursor: pointer;
+}
+.followBtn_wrap button span{
+    position: relative;
+    top: 2px;
+    right: 0;
+}
+div.foot_element_wrap{
+    width: 100%;
+    background: #2A221D;
+}
+.foot_element_wrap > .footer_top{
+    max-width: 1280px;
+    width: 100%;
+    overflow: hidden;
+    padding: 12px 0;
+    margin: 0 auto;
+}
+div.link_txt{
+    width: 70%;
+    overflow: hidden;
+    float: left;
+}
+.link_txt ul{
+    padding: 5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+}
+.link_txt a{
+    color: #fff;
+}
+div.foot_snsIcon{
+    width: 30%;
+    float: left;
+}
+.foot_snsIcon ul{
+    padding: 0 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+div.footer_bottom{
+    width: 100%;
+    overflow: hidden;
+    padding: 42px 0;
+    clear: both;
+    border-top: 1px solid #fff;
+}
+div.footer_bottom_inner{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+.footer_bottom_inner .logo_container{
+    width: 224px;
+    overflow: hidden;
+    float: left;
+}
+.foot_informat{
+    float: left;
+    position: relative;
+    top: 0;
+    left: 60px;
+    color: #fff;
+}
+.foot_informat > div{
+    font-size: 20px;
+}
+.foot_informat > ul{
+    overflow: hidden;
+    margin: 16px 0;
+    
+}
+.foot_informat > ul li{
+    float: left;
+    font-size: 16px;
+    margin: 4px 0;
+}
+.foot_informat > ul li.clear{
+    clear: both;
+}
+li.afterBar::after{
+    content: '|';
+    margin: 0 12px;
+}
+.foot_informat> p{
+    clear: both;
+}
