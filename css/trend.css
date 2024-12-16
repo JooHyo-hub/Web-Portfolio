@@ -36,13 +36,16 @@ div.top_element_wrap{
     transition: height 200ms ease-out;
 }
 /*로고*/
-div.logo_container a{
+div.logo_container{
     width: 170px;
-    display: block;
     float: left;
     position: relative;
     top: 0;
     left: 30px;
+}
+.logo_container a{
+    width: 100%;
+    display: block;
 }
 .logo_container img{
     width: 100%;
@@ -177,14 +180,14 @@ div.rising_trand_sect{
     font-family: "Aref Ruqaa", serif;
     position: relative;
 }
-.tit_txt_box > h1{
+.tit_txt_box > h3{
     font-size: 74px;
     font-weight: 400;
     position: relative;
     left: -100%;
     transition: left 0.5s ease-in-out;
 }
-.tit_txt_box > h1 >span{
+.tit_txt_box > h3 >span{
     display: block;
     color: #DF0000;
     font-family: "Noto Sans", sans-serif;
@@ -203,8 +206,11 @@ div.rising_trand_sect{
 }
 .rising_img_BR{
     display: flex;
-    flex-wrap: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
+}
+.img_box{
+    position: relative;
 }
 .img_box > a{
     display: block;
@@ -233,12 +239,19 @@ div.rising_trand_sect{
     color: #fff;
     font-size: 18px;
 }
-.img_box > a button{
+.hover_more_box{
     width: 100%;
     height: 64px;
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+}
+.img_box button{
+    width: 100%;
+    height: 100%;
     border: none;
     background: #fff;
     color: #111;
@@ -247,13 +260,11 @@ div.rising_trand_sect{
     font-family: "Noto Sans", sans-serif;
     font-weight: 500;
     cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.3s linear;
 }
 .img_box:hover img{
     transform: scale(1.1);
 }
-.img_box:hover button{
+.img_box:hover .hover_more_box{
     opacity: 1;
 }
 .rising_img_BR > div{
@@ -271,13 +282,14 @@ section.trend_item_wrap{
     padding-top: 82px;
 }
 /*타이틀*/
-.trend_item_wrap > h1 {
+.trend_item_wrap > h3 {
     text-align: center;
+    line-height: 44px;
     font-size: 64px;
     font-family: "Aref Ruqaa", serif;
     font-weight: 400;
 }
-.trend_item_wrap > h1 > span{
+.trend_item_wrap > h3 > span{
     display: block;
     color: #DF0000;
     font-family: "Noto Sans", sans-serif;

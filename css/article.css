@@ -14,6 +14,9 @@ body{
     color: #111;
     background: #fff;
 }
+h2.none{
+    display: none;
+}
 /*탑 경로 영역*/
 .channel_text_wrap{
     width: 100%;
@@ -30,15 +33,18 @@ body{
     margin: 0 auto;
     padding: 28px 0;
 }
+.channel_text_wrap ul li{
+    width: auto;
+    float: left;
+    margin-right: 8px;
+}
 .channel_text_wrap ul li a{
     display: block;
     position: relative;
-    margin-right: 8px;
     padding-right: 20px;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
-    float: left;
     color: #666;
 }
 .channel_text_wrap ul li a::after{
@@ -59,7 +65,7 @@ body{
     content: none;
 }
 /*메인*/
-main{
+.main_wrap{
     width: 100%;
     overflow: hidden;
     padding-top: 76px;
@@ -210,14 +216,18 @@ article.main_article_area{
     box-sizing: border-box;
     border-bottom: 1px solid #333;
 }
-.contents_top .logo a{
-    display: block;
+.contents_top .logo{
     width: 240px;
     height: 130px;
     padding: 16px 30px;
     box-sizing: border-box;
     float: left;
     border-right: 1px solid #333;
+}
+.contents_top .logo a{
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 .contents_top .logo img{
     width: 100%;
@@ -396,12 +406,12 @@ ul li.adit_name::after{
     float: right;
     margin: 0 30px;
 }
-.credit_text_box > h1{
+.credit_text_box > h3{
     font-family: "Aref Ruqaa", serif;
     font-weight: 400;
     font-size: 32px;
 }
-.credit_text_box > h1::after{
+.credit_text_box > h3::after{
     display: block;
     content: '';
     width: 37px;
@@ -428,7 +438,7 @@ article.additional_articles{
     transform: translateX(-50%);
     z-index: 10;
 }
-.additional_articles h1{
+.additional_articles h4{
     font-size: 24px;
     font-weight: 400;
 }
@@ -440,6 +450,9 @@ article.additional_articles{
     box-sizing: border-box;
 }
 /*함께 보면 좋은 기사*/
+.Good_together_wrap > h4{
+    font-weight: 400;
+}
 .Good_together_wrap ul{
     margin: 16px 0;
 }
@@ -470,6 +483,9 @@ article.additional_articles{
 .common_keyword_article{
     width: 100%;
     box-sizing: border-box;
+}
+.common_keyword_article > h4{
+    font-weight: 400;
 }
 /*키워드 버튼*/
 .button_wrap{
@@ -567,8 +583,9 @@ button.nonFocus{
     font-size: 18px;
 }
 /*흥미로운 기사*/
-.interest_article_wrap > h1{
+.interest_article_wrap > h4{
     text-align: center;
+    font-weight: 400;
 }
 .interest_article_contents{
     margin: 16px 0;
@@ -577,13 +594,28 @@ button.nonFocus{
     width: 100%;
     overflow: hidden;
 }
-.interest_article_contents .list a{
+.interest_article_contents > div{
+    width: 100%;
+    overflow: hidden;
+}
+.interest_article_contents .list{
+    width: 50%;
+    overflow: hidden;
     float: left;
+}
+.interest_article_contents .list a{
+    display: block;
     padding: 16px;
     box-sizing: border-box;
 }
 .top_box .list a{
-    width: 50%;
+    display: block;
+    width: 100%;
+}
+.bottom_box .list{
+    width: calc(100% / 3);
+    overflow: hidden;
+    float: left;
 }
 /*푸터*/
 div.foot_element_wrap{

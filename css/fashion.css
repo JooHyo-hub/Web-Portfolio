@@ -36,13 +36,16 @@ div.top_element_wrap{
     transition: height 200ms ease-out;
 }
 /*로고*/
-div.logo_container a{
+div.logo_container{
     width: 170px;
-    display: block;
     float: left;
     position: relative;
     top: 0;
     left: 30px;
+}
+.logo_container a{
+    width: 100%;
+    display: block;
 }
 .logo_container img{
     width: 100%;
@@ -252,12 +255,16 @@ div.trand_inner_box{
     overflow: hidden;
     margin: 0 auto;
 }
-.trand_inner_box > h1{
+.trand_inner_box > h3{
     width: 100%;
     text-align: center;
     font-family: "Aref Ruqaa", serif;
     font-size: 54px;
     font-weight: 400;
+}
+.moreBtn_box{
+    width: 100%;
+    overflow: hidden;
 }
 .moreBtn_box > a{
     display: block;
@@ -278,7 +285,9 @@ div.trand_inner_box{
     top: 1px;
 }
 article.itemBox_wrap{
-    margin: 42px auto;
+    width: 100%;
+    overflow: hidden;
+    margin: 16px auto;
 }
 .itemBox_wrap > div{
     width: 50%;
@@ -327,7 +336,7 @@ div.fashionweek_inner_wrap{
     overflow: hidden;
     margin: 0 auto;
 }
-.fashionweek_inner_wrap > h1{
+.fashionweek_inner_wrap > h3{
     width: 100%;
     font-family: "Aref Ruqaa", serif;
     font-size: 54px;
@@ -340,7 +349,7 @@ article.fashionweek_list_container{
     width: 100%;
     overflow: hidden;
     clear: both;
-    padding-top: 42px;
+    padding-top: 16px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -401,12 +410,12 @@ article.jewelry_inner_box{
     font-weight: 500;
     position: relative;
 }
-.jewelry_inner_box > h1{
+.jewelry_inner_box > h3{
     font-family: "Aref Ruqaa", serif;
     font-size: 54px;
     font-weight: 400;
 }
-.jewelry_inner_box > h1 > a{
+.jewelry_inner_box > h3 > a{
     display: block;
     font-family: "Noto Sans", sans-serif;
     font-size: 16px;
@@ -417,10 +426,10 @@ article.jewelry_inner_box{
     right: 11%;
     transition: opacity 0.1s;
 }
-.jewelry_inner_box > h1 > a:hover{
+.jewelry_inner_box > h3 > a:hover{
     opacity: 0.3;
 }
-.jewelry_inner_box > h1 > a >img{
+.jewelry_inner_box > h3 > a >img{
     position: relative;
     top: 1px;
 }
@@ -458,6 +467,10 @@ div.jewelry_list_wrap{
     left: 612px;
 }
 div.jewelry_list_inner_box{
+    width: 100%;
+    overflow: hidden;
+}
+.list_contents{
     width: 100%;
     overflow: hidden;
 }
@@ -527,7 +540,7 @@ div.celebstyle_inner_wrap{
     padding-top: 92px;
     margin: 0 auto;
 }
-.celebstyle_inner_wrap > h1{
+.celebstyle_inner_wrap > h3{
     text-align: center;
     font-family: "Aref Ruqaa", serif;
     font-size: 54px;
@@ -546,6 +559,7 @@ div.celebstyle_list{
     width: calc(100% / 3);
     margin-right: 34px;
     overflow: hidden;
+    cursor: pointer;
     transition: transform 0.3s ease;
 }
 div.celebstyle_list:last-child{
@@ -585,7 +599,7 @@ div.shopng_inner_wrap{
     width: 1400px;
     margin: 0 auto;
 }
-.shopng_inner_wrap > h1{
+.shopng_inner_wrap > h3{
     width: 100%;
     padding: 0 40px;
     box-sizing: border-box;

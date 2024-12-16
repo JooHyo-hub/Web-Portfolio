@@ -44,13 +44,16 @@ div.top_element_wrap{
     transition: height 200ms ease-out;
 }
 /*로고*/
-div.logo_container a{
+div.logo_container{
     width: 170px;
-    display: block;
     float: left;
     position: relative;
     top: 0;
     left: 30px;
+}
+.logo_container a{
+    width: 100%;
+    display: block;
 }
 .logo_container img{
     width: 100%;
@@ -157,13 +160,17 @@ main{
     padding-top: 50px; 
 }
 /*탑 로고*/
-div.top_logo{
-    width: 100%;
+div.landing_logo{
+    width: 170px;
     max-width: 1920px;
     margin: 0 auto;
     overflow: hidden;
     text-align: center;
     padding-top: 22px;
+}
+.landing_logo a{
+    display: block;
+    width: 100%;
 }
 /*메인 탑 슬라이드 및 카테고리*/
 section.main_top_box{
@@ -375,12 +382,12 @@ article.fashion_inner_box{
     font-weight: 500;
     position: relative;
 }
-.fashion_inner_box > h1{
+.fashion_inner_box > h2{
     font-family: "Aref Ruqaa", serif;
     font-size: 54px;
     font-weight: 400;
 }
-.fashion_inner_box > h1 > a{
+.fashion_inner_box > h2 > a{
     display: block;
     font-family: "Noto Sans", sans-serif;
     font-size: 16px;
@@ -391,10 +398,10 @@ article.fashion_inner_box{
     right: 11%;
     transition: opacity 0.1s;
 }
-.fashion_inner_box > h1 > a:hover{
+.fashion_inner_box > h2 > a:hover{
     opacity: 0.3;
 }
-.fashion_inner_box > h1 > a >img{
+.fashion_inner_box > h2 > a >img{
     position: relative;
     top: 1px;
 }
@@ -432,6 +439,10 @@ div.fashion_list_wrap{
     left: 612px;
 }
 div.fashion_list_inner_box{
+    width: 100%;
+    overflow: hidden;
+}
+div.list_contents{
     width: 100%;
     overflow: hidden;
 }
@@ -499,31 +510,32 @@ section.sec-todaysPick-wrap{
     padding-top: 96px;
     margin: 0 auto;
 }
-.sec-todaysPick-wrap > h1{
+.sec-todaysPick-wrap > h3{
     text-align: center;
     font-family: "Aref Ruqaa", serif;
     font-size: 54px;
     font-weight: 400;
 }
-div.pick_elements{
+article.pick_elements{
     width: 992px;
     overflow: hidden;
     margin: 42px auto;
     box-sizing: border-box;
 }
-.pick_elements article{
+.pick_elements > div{
     width: 50%;
     height: 728px;
     padding: 18px;
     box-sizing: border-box;
+    position: relative;
 }
-article.pick_container:first-child{
+.pick_container:first-child{
     float: left;
 }
-article.pick_container:last-child{
+.pick_container:last-child{
     float: right;
 }
-.pick_elements article a{
+.pick_elements > div > a{
     display: block;
     width: 100%;
     height: 100%;
@@ -560,6 +572,12 @@ div.title_box{
     bottom: 0;
 }
 div.view_btn_box{
+    width: 93%;
+    height: 82px;
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
     transition: opacity 0.3s ease;
 }
 div.view_btn_box button{
@@ -594,12 +612,12 @@ article.beauty_inner_box{
     font-weight: 500;
     position: relative;
 }
-.beauty_inner_box > h1{
+.beauty_inner_box > h2{
     font-family: "Aref Ruqaa", serif;
     font-size: 54px;
     font-weight: 400;
 }
-.beauty_inner_box > h1 > a{
+.beauty_inner_box > h2 > a{
     display: block;
     font-family: "Noto Sans", sans-serif;
     font-size: 16px;
@@ -610,10 +628,10 @@ article.beauty_inner_box{
     right: 11%;
     transition: opacity 0.1s;
 }
-.beauty_inner_box > h1 > a:hover{
+.beauty_inner_box > h2 > a:hover{
     opacity: 0.3;
 }
-.beauty_inner_box > h1 > a >img{
+.beauty_inner_box > h2 > a >img{
     position: relative;
     top: 1px;
 }
@@ -651,7 +669,7 @@ div.beauty_list img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: fade in 0.3s;
+    transition: fade 0.3s;
 }
 div.beauty_list p{
     margin: 6px 0;
@@ -663,13 +681,13 @@ section.sec-weeklyBest-wrap{
     padding-top: 96px;
     margin: 0 auto;
 }
-.sec-weeklyBest-wrap > h1{
+.sec-weeklyBest-wrap > h3{
     text-align: center;
     font-family: "Aref Ruqaa", serif;
     font-size: 54px;
     font-weight: 400;
 }
-div.weeklyBest_elements{
+article.weeklyBest_elements{
     width: 1400px;
     overflow: hidden;
     padding: 42px 0;
@@ -679,7 +697,7 @@ div.weeklyBest_elements{
     flex-direction: row;
     justify-content: space-around;
 }
-.weeklyBest_elements article{
+.weeklyBest_elements > div{
     width: calc(100% / 3);
     overflow: hidden;
     padding: 0 22px;
@@ -738,12 +756,12 @@ section.sec-star-wrap{
     padding-top: 96px;
     box-sizing: border-box;
 }
-.sec-star-wrap > h1{
+.sec-star-wrap > h3{
     font-family: "Aref Ruqaa", serif;
     font-size: 54px;
     font-weight: 400;
 }
-.sec-star-wrap > h1 > a{
+.sec-star-wrap > h3 > a{
     display: block;
     font-family: "Noto Sans", sans-serif;
     font-size: 16px;
@@ -754,10 +772,10 @@ section.sec-star-wrap{
     right: 30px;
     transition: opacity 0.1s;
 }
-.sec-star-wrap > h1 > a:hover{
+.sec-star-wrap > h3 > a:hover{
     opacity: 0.3;
 }
-.sec-star-wrap > h1 > a >img{
+.sec-star-wrap > h3 > a >img{
     position: relative;
     top: 1px;
 }
@@ -841,12 +859,12 @@ article.deco_inner_box{
     font-weight: 500;
     position: relative;
 }
-.deco_inner_box > h1{
+.deco_inner_box > h3{
     font-family: "Aref Ruqaa", serif;
     font-size: 54px;
     font-weight: 400;
 }
-.deco_inner_box > h1 > a{
+.deco_inner_box > h3 > a{
     display: block;
     font-family: "Noto Sans", sans-serif;
     font-size: 16px;
@@ -857,10 +875,10 @@ article.deco_inner_box{
     right: 11%;
     transition: opacity 0.1s;
 }
-.deco_inner_box > h1 > a:hover{
+.deco_inner_box > h3 > a:hover{
     opacity: 0.3;
 }
-.deco_inner_box > h1 > a >img{
+.deco_inner_box > h3 > a >img{
     position: relative;
     top: 1px;
 }
