@@ -1,6 +1,6 @@
 //-- 라이징 트랜드 영역
 $(document).ready(function(){
-    let $titleBox = $('.tit_txt_box > h1');
+    let $titleBox = $('.tit_txt_box > h3');
     let $detailBox = $('.tit_txt_box > p');
 
     $titleBox.css({'left' : '0'});
